@@ -15,16 +15,16 @@
 
         <!-- Desktop Navigation -->
         <nav class="hidden md:flex items-center space-x-8 ml-auto mr-8">
-          <router-link to="/" class="nav-link" :class="{ 'text-primary': $route.path === '/' }">
+          <router-link to="/" class="nav-link" exact>
             Home
           </router-link>
-          <router-link :to="myBookingsLink" class="nav-link" :class="{ 'text-primary': $route.path === '/my-bookings' }" @click.prevent="handleMyBookingsClick">
+          <span class="nav-link nav-link-disabled">
             My Bookings
-          </router-link>
-          <router-link to="/about" class="nav-link" :class="{ 'text-primary': $route.path === '/about' }">
+          </span>
+          <router-link to="/about" class="nav-link">
             About
           </router-link>
-          <router-link to="/contact" class="nav-link" :class="{ 'text-primary': $route.path === '/contact' }">
+          <router-link to="/contact" class="nav-link">
             Contact
           </router-link>
         </nav>
@@ -75,12 +75,12 @@
       <!-- Mobile Navigation -->
       <div v-if="showMobileMenu" class="md:hidden py-4 border-t border-gray-200">
         <nav class="flex flex-col space-y-2">
-          <router-link to="/" class="mobile-nav-link" @click="closeMobileMenu">
+          <router-link to="/" class="mobile-nav-link" @click="closeMobileMenu" exact>
             Home
           </router-link>
-          <router-link :to="myBookingsLink" class="mobile-nav-link" @click.prevent="handleMyBookingsClick">
+          <span class="mobile-nav-link mobile-nav-link-disabled">
             My Bookings
-          </router-link>
+          </span>
           <router-link to="/about" class="mobile-nav-link" @click="closeMobileMenu">
             About
           </router-link>
@@ -242,11 +242,43 @@ export default defineComponent({
   /* font-medium */
   transition-property: color;
   transition-duration: 200ms;
+  position: relative; /* Needed for absolute positioning of the pseudo-element */
+  display: inline-block; /* Ensures the pseudo-element's width is based on content */
 }
 
 .nav-link:hover {
   color: #111827;
   /* text-gray-900 */
+}
+
+.nav-link.router-link-active {
+  color: #10B981 !important; /* Tailwind green-500, or adjust to your primary color */
+}
+
+.nav-link.router-link-active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; /* Adjust as needed for spacing */
+  left: 0;
+  width: 100%;
+  height: 2px; /* Thickness of the line */
+  background-color: #10B981; /* Green line color */
+  transform: scaleX(1); /* Make it visible */
+  transition: transform 0.3s ease-in-out;
+  transform-origin: bottom left;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #10B981; /* Green line color */
+  transform: scaleX(0); /* Initially hidden */
+  transition: transform 0.3s ease-in-out;
+  transform-origin: bottom left;
 }
 
 .mobile-nav-link {
@@ -264,6 +296,7 @@ export default defineComponent({
   border-radius: 0.5rem; /* rounded-lg */
   transition-property: color, background-color;
   transition-duration: 200ms;
+  position: relative;
 }
 
 .mobile-nav-link:hover {
@@ -271,5 +304,36 @@ export default defineComponent({
   /* text-gray-900 */
   background-color: #F9FAFB;
   /* bg-gray-50 */
+}
+
+.mobile-nav-link.router-link-active {
+  color: #10B981 !important; /* Tailwind green-500, or adjust to your primary color */
+  background-color: #ECFDF5; /* A light green background for mobile active state */
+}
+
+.mobile-nav-link.router-link-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0; /* Adjust as needed for spacing */
+  left: 0;
+  width: 4px; /* Thickness of the line */
+  height: 100%;
+  background-color: #10B981; /* Green line color */
+  transform: scaleY(1); /* Make it visible */
+  transition: transform 0.3s ease-in-out;
+  transform-origin: top left;
+}
+
+.mobile-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #10B981; /* Green line color */
+  transform: scaleY(0); /* Initially hidden */
+  transition: transform 0.3s ease-in-out;
+  transform-origin: top left;
 }
 </style>

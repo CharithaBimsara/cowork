@@ -14,7 +14,7 @@
             v-model="signInForm.email"
             type="email"
             required
-            class="input-field"
+            class="w-full px-4 py-2 bg-white border border-gray-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
             placeholder="Enter your email"
           >
         </div>
@@ -25,7 +25,7 @@
             v-model="signInForm.password"
             type="password"
             required
-            class="input-field"
+            class="w-full px-4 py-2 bg-white border border-gray-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
             placeholder="Enter your password"
           >
         </div>
@@ -35,10 +35,14 @@
             <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary">
             <span class="ml-2 text-sm text-gray-600">Remember me</span>
           </label>
-          <a href="#" class="text-sm text-primary hover:text-primary/80">Forgot password?</a>
+          <a href="#" class="text-sm text-gray-900 hover:text-gray-700">Forgot password?</a>
         </div>
 
-        <button type="submit" class="w-full btn-primary" :disabled="isSigningIn">
+        <button 
+          type="submit" 
+          class="w-full bg-primary text-white py-4 px-8 rounded-xl font-semibold text-lg hover:bg-primary/90 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50" 
+          :disabled="isSigningIn"
+        >
           {{ isSigningIn ? 'Signing In...' : 'Sign In' }}
         </button>
       </form>
@@ -46,7 +50,7 @@
       <div class="mt-6 text-center">
         <p class="text-gray-600">
           Don't have an account?
-          <button @click="switchToSignUp" class="text-primary hover:text-primary/80 font-medium">
+          <button @click="switchToSignUp" class="text-gray-900 hover:text-gray-700 font-medium">
             Sign up
           </button>
         </p>
@@ -70,7 +74,7 @@
               v-model="signUpForm.firstName"
               type="text"
               required
-              class="input-field"
+              class="w-full px-4 py-2 bg-white border border-gray-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="First name"
             >
           </div>
@@ -80,7 +84,7 @@
               v-model="signUpForm.lastName"
               type="text"
               required
-              class="input-field"
+              class="w-full px-4 py-2 bg-white border border-gray-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="Last name"
             >
           </div>
@@ -92,7 +96,7 @@
             v-model="signUpForm.email"
             type="email"
             required
-            class="input-field"
+            class="w-full px-4 py-2 bg-white border border-gray-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
             placeholder="Enter your email"
           >
         </div>
@@ -103,7 +107,7 @@
             v-model="signUpForm.password"
             type="password"
             required
-            class="input-field"
+            class="w-full px-4 py-2 bg-white border border-gray-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
             placeholder="Create a password"
           >
         </div>
@@ -114,7 +118,7 @@
             v-model="signUpForm.confirmPassword"
             type="password"
             required
-            class="input-field"
+            class="w-full px-4 py-2 bg-white border border-gray-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
             placeholder="Confirm your password"
           >
         </div>
@@ -128,13 +132,17 @@
               class="rounded border-gray-300 text-primary focus:ring-primary"
             >
             <span class="ml-2 text-sm text-gray-600">
-              I agree to the <a href="#" class="text-primary hover:text-primary/80">Terms of Service</a> and 
-              <a href="#" class="text-primary hover:text-primary/80">Privacy Policy</a>
+              I agree to the <a href="#" class="text-gray-900 hover:text-gray-700">Terms of Service</a> and 
+              <a href="#" class="text-gray-900 hover:text-gray-700">Privacy Policy</a>
             </span>
           </label>
         </div>
 
-        <button type="submit" class="w-full btn-primary" :disabled="isSigningUp">
+        <button 
+          type="submit" 
+          class="w-full bg-primary text-white py-4 px-8 rounded-xl font-semibold text-lg hover:bg-primary/90 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50" 
+          :disabled="isSigningUp"
+        >
           {{ isSigningUp ? 'Creating Account...' : 'Create Account' }}
         </button>
       </form>
@@ -142,7 +150,7 @@
       <div class="mt-6 text-center">
         <p class="text-gray-600">
           Already have an account?
-          <button @click="switchToSignIn" class="text-primary hover:text-primary/80 font-medium">
+          <button @click="switchToSignIn" class="text-gray-900 hover:text-gray-700 font-medium">
             Sign in
           </button>
         </p>
@@ -363,7 +371,7 @@ export default defineComponent({
 }
 
 .btn-primary {
-  background-color: #6366F1; /* primary (example: indigo-500) */
+  background-color: #00FE01; /* primary (example: indigo-500) */
   color: #fff;
   font-weight: 500;
   padding: 0.5rem 1rem;

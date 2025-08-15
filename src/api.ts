@@ -1254,7 +1254,7 @@ export class HomeAPI {
           rating: 4.8,
           reviews: 89,
           description: 'Creative workspace for professionals',
-          images: ['https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'],
+          images: ['https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'],
           features: ['Natural Light', 'Standing Desks'],
           pricing: { daily: 40, monthly: 500 },
           isAvailable: true,
@@ -1299,14 +1299,14 @@ export class HomeAPI {
           title: 'Flexible Hot Desks',
           description: 'Grab a hot desk for a day or week, perfect for remote work',
           buttonText: 'Find a Desk',
-          image: 'https://images.unsplash.com/photo-1504384308090-c8997100287a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'
+          image: 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
         }),
         new AdvertisementDto({
           id: 4,
           title: 'Private Office Suites',
           description: 'Secure your own private office for enhanced productivity',
           buttonText: 'View Offices',
-          image: 'https://images.unsplash.com/photo-1520004439295-91d8d1f1f2c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'
+          image: 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
         }),
         new AdvertisementDto({
           id: 5,
@@ -1320,7 +1320,7 @@ export class HomeAPI {
           title: 'Virtual Office Solutions',
           description: 'Establish a professional presence with our virtual office services',
           buttonText: 'Learn More',
-          image: 'https://images.unsplash.com/photo-1507679799977-c7ad93d79e02?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'
+          image: 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
         }),
         new AdvertisementDto({
           id: 7,
@@ -1334,14 +1334,14 @@ export class HomeAPI {
           title: 'Exclusive Partner Deals',
           description: 'Access special discounts from our network of trusted partners',
           buttonText: 'View Deals',
-          image: 'https://images.unsplash.com/photo-1521737711867-ee1ab92e975e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'
+          image: 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
         }),
         new AdvertisementDto({
           id: 9,
           title: 'New Location Opening',
           description: 'Discover our brand new coworking space in the city center',
           buttonText: 'Visit New Space',
-          image: 'https://images.unsplash.com/photo-1504384308090-c8997100287a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'
+          image: 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
         }),
         new AdvertisementDto({
           id: 10,
@@ -1355,10 +1355,10 @@ export class HomeAPI {
       const testimonials = [
         new TestimonialDto({
           id: 1,
-          name: 'Sarah Chen',
-          role: 'Product Manager at Stripe',
-          content: 'WorkSpace has completely transformed how I work. The flexibility to book different spaces based on my needs is incredible.',
-          avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80',
+          name: 'Marcus Rodriguez',
+          role: 'Freelance Designer',
+          content: 'As a freelancer, I love the variety of environments I can choose from. Perfect for different types of work.',
+          avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80',
           rating: 5
         }),
         new TestimonialDto({
@@ -1368,7 +1368,15 @@ export class HomeAPI {
           content: 'As a freelancer, I love the variety of environments I can choose from. Perfect for different types of work.',
           avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80',
           rating: 5
-        })
+        }),
+        new TestimonialDto({
+          id: 3,
+          name: 'Marcus Rodriguez',
+          role: 'Freelance Designer',
+          content: 'As a freelancer, I love the variety of environments I can choose from. Perfect for different types of work.',
+          avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80',
+          rating: 5
+        }),
       ];
 
       return new HomePageDataResponseDto(true, featuredSpaces, advertisements, testimonials);

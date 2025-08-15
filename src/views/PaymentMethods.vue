@@ -78,7 +78,7 @@
                 <button
                   v-if="!method.isDefault"
                   @click="setDefaultPaymentMethod(method.id)"
-                  class="text-primary hover:text-primary/80 text-sm font-medium"
+                  class="text-gray-900 hover:text-gray-700 text-sm font-medium"
                 >
                   Set as Default
                 </button>

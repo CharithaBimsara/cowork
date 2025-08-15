@@ -77,7 +77,7 @@
                 <div>
                   <h3 class="text-lg font-medium text-gray-900">{{ profileForm.firstName }} {{ profileForm.lastName }}</h3>
                   <p class="text-gray-600">{{ profileForm.email }}</p>
-                  <button type="button" @click="triggerFileUpload" class="text-primary hover:text-primary/80 text-sm font-medium mt-1">
+                  <button type="button" @click="triggerFileUpload" class="text-gray-900 hover:text-gray-700 text-sm font-medium mt-1">
                     Change photo
                   </button>
                 </div>

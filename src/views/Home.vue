@@ -123,7 +123,7 @@
                     <div class="max-w-2xl px-6">
                       <h3 class="text-3xl lg:text-4xl font-bold mb-4">{{ ad.title }}</h3>
                       <p class="text-xl mb-6 opacity-90">{{ ad.description }}</p>
-                      <button class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                      <button class="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                         {{ ad.buttonText }}
                       </button>
                     </div>
@@ -423,7 +423,7 @@
             <button 
               @click="subscribeNewsletter"
               :disabled="isSubscribing || !newsletterEmail"
-              class="bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-white/50 disabled:opacity-50"
+              class="bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-white/50 disabled:opacity-50"
             >
               {{ isSubscribing ? 'Subscribing...' : 'Subscribe' }}
             </button>

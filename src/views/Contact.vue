@@ -156,7 +156,7 @@
                   <div>
                     <h4 class="font-semibold text-gray-900 mb-1">Email Us</h4>
                     <p class="text-gray-600 mb-2">Get a response within 24 hours</p>
-                    <a href="mailto:hello@workspace.com" class="text-primary hover:text-primary/80 font-medium">
+                    <a href="mailto:hello@workspace.com" class="text-gray-900 hover:text-gray-700 font-medium">
                       hello@workspace.com
                     </a>
                   </div>
@@ -171,7 +171,7 @@
                   <div>
                     <h4 class="font-semibold text-gray-900 mb-1">Call Us</h4>
                     <p class="text-gray-600 mb-2">Mon-Fri, 9AM-6PM PST</p>
-                    <a href="tel:+15551234567" class="text-primary hover:text-primary/80 font-medium">
+                    <a href="tel:+15551234567" class="text-gray-900 hover:text-gray-700 font-medium">
                       (555) 123-4567
                     </a>
                   </div>
@@ -306,7 +306,7 @@
             Own a coworking space? Join our network and reach thousands of professionals looking for their perfect workspace.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <button class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <button class="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Become a Partner
             </button>
             <button class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
