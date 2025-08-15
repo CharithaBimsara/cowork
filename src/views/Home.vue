@@ -112,7 +112,7 @@
                 :key="index"
                 class="w-full flex-shrink-0 relative"
               >
-                <div class="aspect-[3/1] bg-gradient-to-r from-primary to-primary relative overflow-hidden">
+                <div class="aspect-[4/3] sm:aspect-video lg:aspect-[3/1] bg-gradient-to-r from-primary to-primary relative overflow-hidden">
                   <img 
                     :src="ad.image" 
                     :alt="ad.title"
@@ -120,10 +120,10 @@
                   >
                   <div class="absolute inset-0 bg-black bg-opacity-40"></div>
                   <div class="absolute inset-0 flex items-center justify-center text-center text-white">
-                    <div class="max-w-2xl px-6">
-                      <h3 class="text-3xl lg:text-4xl font-bold mb-4">{{ ad.title }}</h3>
-                      <p class="text-xl mb-6 opacity-90">{{ ad.description }}</p>
-                      <button class="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                    <div class="max-w-2xl px-4 sm:px-6">
+                      <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4">{{ ad.title }}</h3>
+                      <p class="text-sm sm:text-base md:text-lg lg:text-xl mb-6 opacity-90">{{ ad.description }}</p>
+                      <button class="bg-white text-gray-900 px-4 py-2 sm:px-8 sm:py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-sm sm:text-base">
                         {{ ad.buttonText }}
                       </button>
                     </div>
@@ -138,7 +138,7 @@
             @click="previousSlide"
             class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-colors"
           >
-            <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-4 h-4 sm:w-6 sm:h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
             </svg>
           </button>
@@ -146,7 +146,7 @@
             @click="nextSlide"
             class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-colors"
           >
-            <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-4 h-4 sm:w-6 sm:h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
           </button>
